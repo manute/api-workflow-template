@@ -1,7 +1,7 @@
-(ns good-api.system
+(ns api-workflow-template.system
   (:require [aleph.http :as http]
             [com.stuartsierra.component :as component]
-            [good-api.api :as api]))
+            [api-workflow-template.api :as api]))
 
 (defrecord WebServer [port handler server]
   component/Lifecycle

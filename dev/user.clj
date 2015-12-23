@@ -6,7 +6,7 @@
             [clojure.test :as test]
             [com.stuartsierra.component :as component]
             [clojure.tools.namespace.repl :refer (refresh refresh-all)]
-            [good-api.system :as system]
+            [api-workflow-template.system :as system]
             [environ.core :refer (env)]))
 
 

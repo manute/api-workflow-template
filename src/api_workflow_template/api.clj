@@ -1,4 +1,4 @@
-(ns good-api.api
+(ns api-workflow-template.api
   (:require [yesql.core :as yesql]
             [bidi.ring :as bidi]))
 
@@ -15,10 +15,3 @@
   (bidi/make-handler ["/" {"account"
                            {:get
                             {"" (fn [req] {:status 200 :body (get-accounts db)})}}}]))
-
-(defn wrapper-handler [db]
-  (let [accounts (get-accounts db)]
-    (fn [req]
-      {:status 200
-       :headers {"content-type" "text/plain"}
-       :body accounts})))
